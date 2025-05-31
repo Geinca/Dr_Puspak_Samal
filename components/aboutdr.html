@@ -26,15 +26,8 @@
       max-width: 1200px;
       margin: auto;
       align-items: flex-start;
-      opacity: 0;
-      transform: translateY(50px);
       transition: all 1s ease;
       box-shadow: none;
-    }
-
-    .about-container.animate {
-      opacity: 1;
-      transform: translateY(0);
     }
 
     .about-image {
@@ -102,7 +95,7 @@
         </p>
         <div class="qualification-list">
           <div class="qualification-item">
-            <a href="#">READ MORE</a>
+            <a href="../about.html">READ MORE</a>
           </div>
         </div>
       </div>
@@ -110,22 +103,22 @@
   </section>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const aboutContainer = document.getElementById("aboutContainer");
+    // document.addEventListener("DOMContentLoaded", function () {
+    //   const aboutContainer = document.getElementById("aboutContainer");
 
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("animate");
-            }
-          });
-        },
-        { threshold: 0.1 }
-      );
+    //   const observer = new IntersectionObserver(
+    //     (entries) => {
+    //       entries.forEach((entry) => {
+    //         if (entry.isIntersecting) {
+    //           entry.target.classList.add("animate");
+    //         }
+    //       });
+    //     },
+    //     { threshold: 0.1 }
+    //   );
 
-      observer.observe(aboutContainer);
-    });
+    //   observer.observe(aboutContainer);
+    // });
   </script>
 </body>
 

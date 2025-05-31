@@ -487,37 +487,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-function initaboutdr() {
-  const aboutContainer = document.getElementById("aboutContainer");
-
-  // Trigger animation when element comes into view
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate");
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
-
-  observer.observe(aboutContainer);
-
-  // Add hover effect to qualifications
-  const qualItems = document.querySelectorAll(".qualification-item");
-  qualItems.forEach((item) => {
-    item.addEventListener("mouseenter", () => {
-      item.style.transform = "translateY(-5px)";
-      item.style.boxShadow = "0 10px 20px rgba(37, 99, 235, 0.3)";
-    });
-    item.addEventListener("mouseleave", () => {
-      item.style.transform = "";
-      item.style.boxShadow = "0 4px 6px rgba(37, 99, 235, 0.2)";
-    });
-  });
-}
-
 document.addEventListener("DOMContentLoaded", function () {
   // Load hero section dynamically
   fetch("components/whatsapp.html")
