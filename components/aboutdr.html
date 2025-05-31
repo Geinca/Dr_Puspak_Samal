@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Puspak Samal - Cardiologist</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+      color: #333;
+    }
+
+    .about-section {
+      background: white;
+    }
+
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      max-width: 1200px;
+      margin: auto;
+      align-items: flex-start;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease;
+      box-shadow: none;
+    }
+
+    .about-container.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .about-image {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+
+    .about-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-content {
+      flex: 2 1 500px;
+    }
+
+    .about-content h2 {
+      font-size: 2rem;
+      color: #007bff;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-content {
+        text-align: left;
+      }
+
+      .qualification-list {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="about-section">
+    <div class="about-container" id="aboutContainer">
+      <div class="about-image">
+        <img src="images/puspak.png" alt="Dr. Puspak Samal - Cardiologist" />
+      </div>
+      <div class="about-content">
+        <h2>Dr. Puspak Samal</h2>
+        <p>
+          Dr. Puspak Samal is a highly skilled and experienced cardiologist dedicated to providing comprehensive cardiac
+          care. He specializes in preventive cardiology, interventional procedures, and heart disease management with
+          years of expertise and advanced diagnostics.
+        </p>
+        <p>
+          He completed his MBBS from Medical College, Kolkata, followed by an MD in General Medicine and a DM in
+          Cardiology from NRS Medical College. His training and dedication make him a trusted name in modern cardiac
+          treatment.
+        </p>
+        <div class="qualification-list">
+          <div class="qualification-item">
+            <a href="#">READ MORE</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const aboutContainer = document.getElementById("aboutContainer");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      observer.observe(aboutContainer);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,219 @@
+:root {
+    --primary: #2563eb;
+    --primary-light: #3b82f6;
+    --secondary: #10b981;
+    --accent: #f59e0b;
+    --dark: #1e293b;
+    --light: #f8fafc;
+    --gray: #64748b;
+    --border-radius: 0;
+    --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about-section {
+    width: 100%;
+    padding: 80px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f8fafc 0%, #f0f4ff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="1" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.about-container {
+    display: flex;
+    max-width: 2000px;
+    width: 100%;
+    align-items: center;
+    gap: 60px;
+    position: relative;
+    z-index: 2;
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 40px;
+    box-shadow: var(--shadow);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.about-container.animate {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.about-image {
+    position: relative;
+    flex: 1;
+    min-width: 350px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: none;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: var(--transition);
+    transform: scale(1.03);
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+.about-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(16, 185, 129, 0.1) 100%);
+    z-index: 1;
+}
+
+.about-content h2 {
+    font-size: 36px;
+    color: var(--dark);
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 2px;
+}
+
+.about-content p {
+    font-size: 17px;
+    color: var(--gray);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.qualification-list {
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 55px;
+}
+
+.qualification-item {
+    color: white;
+    background: #609bb6;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+}
+
+.qualification-item a {
+    font-size: 15px;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .about-container {
+        gap: 40px;
+    }
+
+    .about-image {
+        min-width: 300px;
+    }
+
+    .about-content h2 {
+        font-size: 32px;
+    }
+
+    .about-content p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        padding: 60px 5%;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .about-image {
+        min-width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .about-content h2 {
+        font-size: 28px;
+        margin: 20px auto;
+    }
+
+    .about-content h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .qualification-list {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section {
+        padding: 30px 5%;
+    }
+
+    .about-container {
+        padding: 25px;
+    }
+
+    .about-content h2 {
+        font-size: 24px;
+    }
+
+    .about-content p {
+        font-size: 15px;
+    }
+
+    .qualification-item {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+}

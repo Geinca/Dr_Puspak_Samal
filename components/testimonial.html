@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Testimonials</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <section class="testimonials-section">
+        <div class="ssection-title">
+            <h2>What Our Clients Say</h2>
+            <p>Don't just take our word for it - here's what our clients have to say about their experience with us.</p>
+        </div>
+        
+        <div class="testimonials-container" id="testimonialsContainer">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="testimonial-content">
+                    <p>Dr. Puspak Samal at Ortho Spine Care is an exceptional doctor with a deep understanding of orthopedic issues. His excellent treatment and compassionate care have made a significant impact on my recovery. I highly recommend Dr. Samal for anyone seeking top-notch orthopedic care.</p>
+                </div>
+                <div class="testimonial-author"  style="padding-top: 27px;">
+                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Sarah Johnson" class="author-img">
+                    <div class="author-info">
+                        <h4>Sandip</h4>
+                        <!-- <p>CEO, TechSolutions Inc.</p> -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="testimonial-content">
+                    <p>I had a great experience with Dr. Puspak Samal at Ortho Spine Care. Booking was easy, service was quick, and the supervision was good. The care provided was gentle and the prices were reasonable, with subsidies available. The clinic was clean and hygienic, and the treatment I received was excellent. It`s easily accessible and the staff is extremely supportive.</p>
+                </div>
+                <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/women/42.jpg" alt="Michael Chen" class="author-img">
+                    <div class="author-info">
+                        <h4>SASMITA</h4>
+                        <!-- <p>Marketing Director, Global Corp</p> -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="testimonial-content">
+                    <p>Dr. Puspak Samal at Ortho Spine Care provided an excellent experience. The clinic was clean and hygienic, and the staff were extremely supportive. The care provided was of high standard, and the clinic is well connected for easy access.</p>
+                </div>
+                <div class="testimonial-author"  style="padding-top: 80px;">
+                    <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Emma Rodriguez" class="author-img">
+                    <div class="author-info" >
+                        <h4 >saswat</h4>
+                        <!-- <p>Founder, Startup Ventures</p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // document.addEventListener('DOMContentLoaded', function() {
+        //     const testimonialsContainer = document.getElementById('testimonialsContainer');
+        //     const testimonialCards = document.querySelectorAll('.testimonial-card');
+        //     let currentIndex = 0;
+        //     let interval;
+        //     let isDragging = false;
+        //     let startPos = 0;
+        //     let currentTranslate = 0;
+        //     let prevTranslate = 0;
+            
+        //     function setupSlider() {
+        //         if (window.innerWidth < 768) {
+        //             // Mobile view - setup slider
+        //             if (!interval) {
+        //                 startAutoSlide();
+        //             }
+                    
+        //             // Add touch event listeners
+        //             testimonialCards.forEach(card => {
+        //                 card.addEventListener('touchstart', touchStart);
+        //                 card.addEventListener('touchmove', touchMove);
+        //                 card.addEventListener('touchend', touchEnd);
+        //             });
+        //         } else {
+        //             // Desktop view - show all testimonials
+        //             clearInterval(interval);
+        //             interval = null;
+        //             testimonialsContainer.style.transform = 'translateX(0)';
+                    
+        //             // Remove touch event listeners
+        //             testimonialCards.forEach(card => {
+        //                 card.removeEventListener('touchstart', touchStart);
+        //                 card.removeEventListener('touchmove', touchMove);
+        //                 card.removeEventListener('touchend', touchEnd);
+        //             });
+        //         }
+        //     }
+            
+        //     function startAutoSlide() {
+        //         interval = setInterval(() => {
+        //             currentIndex = (currentIndex + 1) % testimonialCards.length;
+        //             updateSliderPosition();
+        //         }, 3000); // Change slide every 3 seconds
+        //     }
+            
+        //     function updateSliderPosition() {
+        //         const cardWidth = testimonialCards[0].offsetWidth + 15; // width + gap
+        //         const newTranslate = -currentIndex * cardWidth;
+        //         testimonialsContainer.style.transform = `translateX(${newTranslate}px)`;
+        //         currentTranslate = newTranslate;
+        //     }
+            
+        //     function touchStart(e) {
+        //         startPos = e.touches[0].clientX;
+        //         isDragging = true;
+        //         clearInterval(interval);
+        //     }
+            
+        //     function touchMove(e) {
+        //         if (!isDragging) return;
+        //         const currentPosition = e.touches[0].clientX;
+        //         const diff = currentPosition - startPos;
+        //         testimonialsContainer.style.transform = `translateX(${currentTranslate + diff}px)`;
+        //     }
+            
+        //     function touchEnd() {
+        //         isDragging = false;
+        //         const movedBy = currentTranslate - prevTranslate;
+                
+        //         if (movedBy < -50 && currentIndex < testimonialCards.length - 1) {
+        //             currentIndex += 1;
+        //         }
+                
+        //         if (movedBy > 50 && currentIndex > 0) {
+        //             currentIndex -= 1;
+        //         }
+                
+        //         updateSliderPosition();
+        //         startAutoSlide();
+        //     }
+            
+        //     // Initial setup
+        //     setupSlider();
+            
+        //     // Handle window resize
+        //     window.addEventListener('resize', function() {
+        //         setupSlider();
+        //         if (window.innerWidth < 768) {
+        //             updateSliderPosition();
+        //         }
+        //     });
+        // });
+    </script>
+</body>
+</html>

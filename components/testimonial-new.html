@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Testimonial Style</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+      background-color: #fff;
+      color: #444;
+    }
+
+    .testimonial-wrapper {
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .testimonial-image img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 8px;
+    }
+
+    .testimonial-text {
+      border-left: 5px solid #53c0e9;
+      padding-left: 25px;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #666;
+    }
+
+    .testimonial-author {
+      text-align: right;
+      margin-top: 30px;
+    }
+
+    .testimonial-author h4 {
+      margin: 0;
+      font-weight: bold;
+      color: #002e5b;
+    }
+
+    .testimonial-author p {
+      margin: 0;
+      font-size: 14px;
+      color: #195c88;
+    }
+
+    @media (max-width: 768px) {
+      .testimonial-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .testimonial-text {
+        border-left: none;
+        border-top: 5px solid #53c0e9;
+        padding-left: 0;
+        padding-top: 20px;
+      }
+
+      .testimonial-author {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="testimonial-wrapper">
+    <div class="testimonial-image">
+      <img src="your-image.jpg" alt="Testimonial Image">
+    </div>
+    <div>
+      <div class="testimonial-text">
+        For the most of my life, I have trained and presented wildlife in public conservation education programs and the media. My work is often very physically demanding and I have used the Senta Clinic and Dr. Sanjay Ghosh to treat my spinal issues and keep me able to continue my work and manage my pain.
+      </div>
+      <div class="testimonial-author">
+        <h4>– Joan Embery</h4>
+        <p>Wildlife Expert, and TV Personality</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

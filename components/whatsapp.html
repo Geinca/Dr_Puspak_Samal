@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fixed Vertical Social Icons</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    :root {
+      --widget-size: 50px;
+    }
+
+    /* Container fixed to the bottom right */
+    .social-widget-container {
+      position: fixed;
+      bottom: 30px;
+      left: 35px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    /* Common button styles */
+    .social-widget-btn {
+      width: var(--widget-size);
+      height: var(--widget-size);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: #fff;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      position: relative;
+    }
+
+    .social-widget-btn:hover {
+      transform: scale(1.1);
+    }
+
+    /* Social platform colors */
+    .facebook {
+      background: #1877f2;
+    }
+
+    .youtube {
+      background: #ff0000;
+    }
+
+    .instagram {
+      background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    }
+
+    .x-twitter {
+      background: #000;
+    }
+
+    .linkedin {
+      background: #0077b5;
+    }
+
+    .whatsapp {
+      background: #25d366;
+    }
+
+    .call {
+      background: #3b5998;
+    }
+
+    /* Tooltip */
+    .social-widget-btn span {
+      position: absolute;
+      right: calc(100% + 10px);
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 13px;
+      opacity: 0;
+      white-space: nowrap;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .social-widget-btn:hover span {
+      opacity: 1;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 480px) {
+      .social-widget-container {
+        bottom: 15px;
+        right: 15px;
+      }
+
+      .social-widget-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="social-widget-container">
+    <a href="https://facebook.com" target="_blank" class="social-widget-btn facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://youtube.com" target="_blank" class="social-widget-btn youtube">
+      <i class="fab fa-youtube"></i>
+    </a>
+    <a href="https://instagram.com" target="_blank" class="social-widget-btn instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <!-- <a href="https://twitter.com" target="_blank" class="social-widget-btn x-twitter">
+      <i class="fab fa-x-twitter"></i>
+    </a> -->
+    <a href="https://linkedin.com" target="_blank" class="social-widget-btn linkedin">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="https://wa.me/9876543210" target="_blank" class="social-widget-btn whatsapp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <!-- <a href="tel:9876543210" class="social-widget-btn call">
+      <i class="fas fa-phone"></i>
+    </a> -->
+  </div>
+</body>
+
+</html>

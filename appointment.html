@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>appointment</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/appointment.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
+    <script src="https://kit.fontawesome.com/YOUR-FONT-AWESOME-KIT.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <div id="nav"></div>
+    </header>
+
+    <!-- main -->
+    <main>
+        <!-- Appointment Booking Section -->
+        <section class="appointment-container">
+            <div class="appointment-content">
+                <img src="images/3951637.jpg" alt="Doctor Appointment" class="appointment-image">
+                <div class="appointment-wrapper">
+                    <h2 class="appointment-heading">Book an Appointment</h2>
+                    <p class="appointment-subtitle">Schedule your visit with our expert doctors.</p>
+
+                    <form class="appointment-form-box">
+                        <!-- Name and Age -->
+                        <div class="appointment-row">
+                            <div class="appointment-field">
+                                <input type="text" id="first-name" placeholder="Enter first name" required>
+                            </div>
+                            <div class="appointment-field">
+                                <input type="text" id="last-name" placeholder="Enter last name" required>
+                            </div>
+                        </div>
+
+                        <!-- Email and Phone -->
+                        <div class="appointment-row">
+                            <div class="appointment-field">
+                                <input type="email" id="email" placeholder="Enter email" required>
+                            </div>
+                            <div class="appointment-field">
+                                <input type="tel" id="phone" placeholder="Enter phone number" required>
+                            </div>
+                        </div>
+
+                        <!-- Gender and Specialty -->
+                        <div class="appointment-row">
+                            <div class="appointment-field">
+                                <select id="gender" required>
+                                    <option value="" disabled selected>Select Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="appointment-field">
+                                <select id="specialty" required>
+                                    <option value="" disabled selected>Select Specialty</option>
+                                    <option value="Cardiology">Cardiology</option>
+                                    <option value="Dermatology">Dermatology</option>
+                                    <option value="Neurology">Neurology</option>
+                                    <option value="Pediatrics">Pediatrics</option>
+                                    <option value="Orthopedics">Orthopedics</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Appointment Date -->
+                        <div class="appointment-field">
+                            <input type="date" id="appointment-date" required>
+                        </div>
+
+                        <!-- Time Slot Selection -->
+                        <div class="appointment-time-slot">
+                            <p class="time-slot-label">Select a Time Slot</p>
+                            <div class="time-slot-options">
+                                <input type="radio" id="time-9am" name="time-slot" value="9:00 AM">
+                                <label for="time-9am">9:00 AM</label>
+
+                                <input type="radio" id="time-10am" name="time-slot" value="10:00 AM">
+                                <label for="time-10am">10:00 AM</label>
+
+                                <input type="radio" id="time-11am" name="time-slot" value="11:00 AM">
+                                <label for="time-11am">11:00 AM</label>
+
+                                <input type="radio" id="time-2pm" name="time-slot" value="2:00 PM">
+                                <label for="time-2pm">2:00 PM</label>
+
+                                <input type="radio" id="time-3pm" name="time-slot" value="3:00 PM">
+                                <label for="time-3pm">3:00 PM</label>
+
+                                <input type="radio" id="time-4pm" name="time-slot" value="4:00 PM">
+                                <label for="time-4pm">4:00 PM</label>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="appointment-submit-btn">Book Appointment</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <div id="whatsapp"></div>
+        <div id="footer"></div>
+    </main>
+
+    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/comp.js"></script>
+</body>
+
+</html>

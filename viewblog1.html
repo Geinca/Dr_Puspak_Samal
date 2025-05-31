@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Matters | Wellness Blog</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style>
+        :root {
+            --primary: #2a9d8f;
+            --secondary: #264653;
+            --accent: #e9c46a;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --text: #333;
+            --gray: #6c757d;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .blog-header {
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .blog-header h1 {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .blog-meta {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .main-article {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        .article-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .article-body {
+            padding: 2rem;
+        }
+
+        .article-body h2 {
+            color: var(--secondary);
+            margin: 1.5rem 0 1rem;
+        }
+
+        .article-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sidebar-widget {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+        }
+
+        .widget-title {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .recent-posts {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .recent-post {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .recent-post img {
+            width: 80px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .recent-post h4 {
+            font-size: 0.9rem;
+        }
+
+        .categories ul {
+            list-style: none;
+        }
+
+        .categories li {
+            margin-bottom: 0.5rem;
+        }
+
+        .categories a {
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .categories a:hover {
+            color: var(--primary);
+        }
+
+        .newsletter-form input {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .newsletter-form button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .newsletter-form button:hover {
+            background-color: var(--secondary);
+        }
+
+
+        @media (max-width: 768px) {
+            .blog-content {
+                grid-template-columns: 1fr;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <div id="nav"></div>
+
+    <!-- main -->
+    <main>
+        <section class="container" style="padding-top: 40px;">
+            <article class="blog-content">
+                <div class="main-article">
+                    <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528" alt="Doctor with patient"
+                        class="article-image">
+                    <div class="article-body">
+                        <div class="blog-meta">
+                            <span>Posted on: June 15, 2023</span> |
+                            <span>Category: Nutrition</span> |
+                            <span>By: Dr. Sarah Johnson</span>
+                        </div>
+                        <h1>The Importance of Balanced Nutrition for Long-Term Health</h1>
+
+                        <p>Good nutrition is one of the keys to a healthy life. You can improve your health by keeping a
+                            balanced diet. You should eat foods that contain vitamins and minerals. This includes
+                            fruits, vegetables, whole grains, dairy, and a source of protein.</p>
+
+                        <h2>Understanding Macronutrients</h2>
+                        <p>The three main macronutrients are carbohydrates, proteins, and fats. Each plays a unique role
+                            in maintaining bodily functions:</p>
+                        <ul>
+                            <li><strong>Carbohydrates:</strong> Your body's main source of energy</li>
+                            <li><strong>Proteins:</strong> Essential for building and repairing tissues</li>
+                            <li><strong>Fats:</strong> Important for energy storage and nutrient absorption</li>
+                        </ul>
+
+                        <h2>The Role of Micronutrients</h2>
+                        <p>Vitamins and minerals, though needed in smaller amounts, are crucial for disease prevention
+                            and wellbeing. Deficiencies can lead to serious health problems.</p>
+
+                        <h2>Practical Tips for Balanced Eating</h2>
+                        <p>Here are some simple ways to improve your daily nutrition:</p>
+                        <ol>
+                            <li>Fill half your plate with fruits and vegetables</li>
+                            <li>Choose whole grains over refined grains</li>
+                            <li>Include lean protein sources</li>
+                            <li>Limit added sugars and saturated fats</li>
+                            <li>Stay hydrated with water</li>
+                        </ol>
+
+                        <p>Remember, small changes can lead to big health benefits over time. Consult with a
+                            nutritionist or dietitian for personalized advice.</p>
+                    </div>
+                </div>
+
+                <aside class="sidebar">
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">About the Author</h3>
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <img src="images/puspak.png" alt="Dr. Sarah Johnson"
+                                style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
+                            <div>
+                                <h4>Dr. Puspak Samal</h4>
+                                <p style="font-size: 0.8rem; color: var(--gray);">Orthopedic Surgeon</p>
+                            </div>
+                        </div>
+                        <p>Dr. Puspak has over 15 years of experience in clinical nutrition and wellness coaching. he is
+                            passionate about helping people develop sustainable healthy eating habits.</p>
+                    </div>
+
+                    <div class="sidebar-widget recent-posts">
+                        <h3 class="widget-title">Recent Posts</h3>
+                        <div class="recent-post">
+                            <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7" alt="Exercise">
+                            <h4><a href="#">The Benefits of Regular Exercise</a></h4>
+                        </div>
+                        <div class="recent-post">
+                            <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352" alt="Healthy food">
+                            <h4><a href="#">Superfoods You Should Include in Your Diet</a></h4>
+                        </div>
+                        <div class="recent-post">
+                            <img src="https://images.unsplash.com/photo-1491841550275-ad7854e35ca6" alt="Sleep">
+                            <h4><a href="#">The Science of Sleep and Health</a></h4>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget categories">
+                        <h3 class="widget-title">Categories</h3>
+                        <ul>
+                            <li><a href="#">Nutrition (12)</a></li>
+                            <li><a href="#">Fitness (8)</a></li>
+                            <li><a href="#">Mental Health (5)</a></li>
+                            <li><a href="#">Preventive Care (7)</a></li>
+                            <li><a href="#">Healthy Living (15)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Newsletter</h3>
+                        <p>Subscribe to get the latest health tips</p>
+                        <form class="newsletter-form">
+                            <input type="text" placeholder="Your Name">
+                            <input type="email" placeholder="Your Email">
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </aside>
+            </article>
+        </section>
+
+        <div id="footer"></div>
+    </main>
+
+    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/comp.js"></script>
+</body>
+
+</html>

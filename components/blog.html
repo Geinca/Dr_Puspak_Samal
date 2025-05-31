@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Slider</title>
+    <style>
+        /* General Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .hs-blog-section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .hs-section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .hs-section-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #222;
+        }
+
+        .hs-view-all {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #f0f0f0;
+            color: #333;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .hs-view-all:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Slider Styles */
+        .hs-blog-slider {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hs-slider-container {
+            display: flex;
+            transition: transform 0.5s ease;
+            will-change: transform;
+        }
+
+        .hs-blog-card {
+            flex: 0 0 calc(100% - 20px);
+            margin: 0 10px;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .hs-blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .hs-blog-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .hs-blog-content {
+            padding: 20px;
+        }
+
+        .hs-blog-date {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .hs-blog-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .hs-blog-excerpt {
+            font-size: 15px;
+            color: #555;
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .hs-read-more {
+            display: inline-block;
+            color: #0066cc;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .hs-read-more:hover {
+            text-decoration: underline;
+        }
+
+        /* Navigation Controls */
+        .hs-slider-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .hs-slider-btn {
+            width: 40px;
+            height: 40px;
+            background-color: #f0f0f0;
+            border: none;
+            border-radius: 50%;
+            margin: 0 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .hs-slider-btn:hover {
+            background-color: #e0e0e0;
+        }
+
+        .hs-slider-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: #333;
+        }
+
+        /* Responsive Styles */
+        @media (min-width: 768px) {
+            .hs-blog-card {
+                flex: 0 0 calc(50% - 20px);
+            }
+        }
+
+        @media (min-width: 992px) {
+            .hs-blog-card {
+                flex: 0 0 calc(33.333% - 20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hs-blog-section">
+        <div class="hs-section-header">
+            <h2 class="hs-section-title">Latest Blog Posts</h2>
+            <a href="blogging.html" class="hs-view-all">View All</a>
+        </div>
+
+        <div class="hs-blog-slider">
+            <div class="hs-slider-container">
+                <!-- Blog Card 1 -->
+                <div class="hs-blog-card">
+                    <img src="images/1o.jpeg" alt="Blog Post" class="hs-blog-img">
+                    <div class="hs-blog-content">
+                        <div class="hs-blog-date">May 15, 2023</div>
+                        <h3 class="hs-blog-title">"When Should You See an Orthopedic Surgeon?"</h3>
+                        <p class="hs-blog-excerpt">Discover the key signs and symptoms that indicate it's time to consult an orthopedic specialist.</p>
+                        <a href="viewblog1.html" class="hs-read-more">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Blog Card 2 -->
+                <div class="hs-blog-card">
+                    <img src="images/2o.jpeg" alt="Blog Post" class="hs-blog-img">
+                    <div class="hs-blog-content">
+                        <div class="hs-blog-date">June 2, 2023</div>
+                        <h3 class="hs-blog-title">Understanding Osteoarthritis: Causes, Symptoms, and Relief</h3>
+                        <p class="hs-blog-excerpt">A practical guide to managing osteoarthritis through lifestyle changes, therapy, and modern treatments.</p>
+                        <a href="viewblog2.html" class="hs-read-more">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Blog Card 3 -->
+                <div class="hs-blog-card">
+                    <img src="images/3o.jpeg" alt="Blog Post" class="hs-blog-img">
+                    <div class="hs-blog-content">
+                        <div class="hs-blog-date">June 18, 2023</div>
+                        <h3 class="hs-blog-title">Joint Replacement Myths Busted!</h3>
+                        <p class="hs-blog-excerpt">Debunking the most common misconceptions about hip, knee, and shoulder replacement surgeries.</p>
+                        <a href="viewblog3.html" class="hs-read-more">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Blog Card 4 -->
+                <div class="hs-blog-card">
+                    <img src="images/5o.jpeg" alt="Blog Post" class="hs-blog-img">
+                    <div class="hs-blog-content">
+                        <div class="hs-blog-date">July 5, 2023</div>
+                        <h3 class="hs-blog-title">Recovering After Orthopedic Surgery: What to Expect</h3>
+                        <p class="hs-blog-excerpt">A step-by-step overview of the rehabilitation process and how to heal effectively.</p>
+                        <a href="viewblog4.html" class="hs-read-more">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Blog Card 5 -->
+                <div class="hs-blog-card">
+                    <img src="images/4o.jpeg" alt="Blog Post" class="hs-blog-img">
+                    <div class="hs-blog-content">
+                        <div class="hs-blog-date">July 22, 2023</div>
+                        <h3 class="hs-blog-title">How to Keep Your Bones Healthy at Any Age.</h3>
+                        <p class="hs-blog-excerpt">Explore diet, exercise, and habits that strengthen bone health and prevent orthopedic issues..</p>
+                        <a href="viewblog5.html" class="hs-read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hs-slider-nav">
+                <button class="hs-slider-btn hs-prev-btn">
+                    <svg xmlns="https://source.unsplash.com/random/600x400/?doctor" viewBox="0 0 24 24">
+                        <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/>
+                    </svg>
+                </button>
+                <button class="hs-slider-btn hs-next-btn">
+                    <svg xmlns="https://source.unsplash.com/random/600x400/?medical" viewBox="0 0 24 24">
+                        <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.querySelector('.hs-slider-container');
+            const prevBtn = document.querySelector('.hs-prev-btn');
+            const nextBtn = document.querySelector('.hs-next-btn');
+            const blogCards = document.querySelectorAll('.hs-blog-card');
+    
+            let currentIndex = 0;
+            let cardsToShow = 1;
+            let interval;
+    
+            function updateCardsToShow() {
+                if (window.innerWidth >= 992) {
+                    cardsToShow = 3;
+                } else if (window.innerWidth >= 768) {
+                    cardsToShow = 2;
+                } else {
+                    cardsToShow = 1;
+                }
+    
+                currentIndex = 0;
+                updateSlider();
+            }
+    
+            function updateSlider() {
+                const cardWidth = blogCards[0].offsetWidth + 20;
+                const translateX = -currentIndex * cardWidth;
+                slider.style.transform = `translateX(${translateX}px)`;
+    
+                // Optional: hide buttons instead of disabling
+                prevBtn.disabled = blogCards.length <= cardsToShow;
+                nextBtn.disabled = blogCards.length <= cardsToShow;
+            }
+    
+            function goToNext() {
+                currentIndex++;
+                if (currentIndex > blogCards.length - cardsToShow) {
+                    currentIndex = 0; // Loop back to start
+                }
+                updateSlider();
+            }
+    
+            function goToPrev() {
+                currentIndex--;
+                if (currentIndex < 0) {
+                    currentIndex = blogCards.length - cardsToShow; // Go to end
+                }
+                updateSlider();
+            }
+    
+            nextBtn.addEventListener('click', function() {
+                clearInterval(interval);
+                goToNext();
+                startAutoSlide();
+            });
+    
+            prevBtn.addEventListener('click', function() {
+                clearInterval(interval);
+                goToPrev();
+                startAutoSlide();
+            });
+    
+            function startAutoSlide() {
+                interval = setInterval(goToNext, 4000); // Change every 4 seconds
+            }
+    
+            updateCardsToShow();
+            window.addEventListener('resize', updateCardsToShow);
+            startAutoSlide(); // Begin auto sliding on load
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,14 @@
+.clients{
+    background: #61AFCC;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 5%;
+    gap: 15px;
+}
+.clients-img{
+    width: 18%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

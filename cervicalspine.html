@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Cervical Spine Resource</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #16a085;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --text: #34495e;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            /* padding-bottom: 30px; */
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        h2 {
+            color: var(--secondary);
+            font-size: 2rem;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--light);
+            font-weight: 600;
+        }
+
+        h3 {
+            color: var(--accent);
+            font-size: 1.5rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        ul,
+        ol {
+            margin-bottom: 25px;
+            padding-left: 30px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .anatomy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .anatomy-card {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .anatomy-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .anatomy-card h3 {
+            color: var(--primary);
+        }
+
+        .condition-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 40px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .condition-table th {
+            background-color: var(--primary);
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .condition-table td {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+            background-color: white;
+        }
+
+        .condition-table tr:hover td {
+            background-color: var(--light);
+        }
+
+        .highlight-box {
+            background-color: #e3f2fd;
+            border-left: 5px solid var(--secondary);
+            padding: 25px;
+            margin: 40px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .caption {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .references {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .anatomy-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- header -->
+    <div id="nav"></div>
+
+    <!-- main -->
+    <main>
+        <div class="container">
+            <header>
+                <h1>Cervical Spine: Comprehensive Clinical Reference</h1>
+                <p>A detailed anatomical, functional, and clinical overview of the cervical vertebral column</p>
+            </header>
+
+            <section id="introduction">
+                <p>The cervical spine represents the most superior portion of the vertebral column, consisting of seven
+                    distinct vertebrae (C1-C7) that provide remarkable mobility while protecting critical neural and
+                    vascular structures. This region's unique anatomy and biomechanics make it particularly susceptible
+                    to both acute trauma and degenerative changes.</p>
+            </section>
+
+            <section id="anatomy">
+                <h2>Detailed Anatomy</h2>
+                <p>The cervical spine can be divided into two distinct regions based on anatomical and functional
+                    characteristics:</p>
+
+                <div class="anatomy-grid">
+                    <div class="anatomy-card">
+                        <h3>Upper Cervical Spine (C1-C2)</h3>
+                        <ul>
+                            <li><strong>C1 (Atlas):</strong> Ring-shaped with no vertebral body, articulates with
+                                occipital condyles (atlanto-occipital joint)</li>
+                            <li><strong>C2 (Axis):</strong> Features the odontoid process (dens) that articulates with
+                                C1 (atlantoaxial joint)</li>
+                            <li>Specialized joints allow for ~50% of cervical rotation</li>
+                            <li>No intervertebral discs between C1-C2</li>
+                        </ul>
+                    </div>
+
+                    <div class="anatomy-card">
+                        <h3>Lower Cervical Spine (C3-C7)</h3>
+                        <ul>
+                            <li>Typical vertebral structure with body, pedicles, laminae, and processes</li>
+                            <li>Uncovertebral joints (Luschka's joints) present from C3-C7</li>
+                            <li>Bifid spinous processes (except C7)</li>
+                            <li>Transverse foramina for vertebral arteries (C6-C7)</li>
+                            <li>Intervertebral discs between each vertebra</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Cervical_vertebrae_-_close-up_-_animation.gif/320px-Cervical_vertebrae_-_close-up_-_animation.gif"
+                        alt="Cervical vertebrae anatomy animation">
+                    <p class="caption">Figure 1: Anatomical structure of cervical vertebrae</p>
+                </div>
+
+                <h3>Key Anatomical Features</h3>
+                <ul>
+                    <li><strong>Vertebral foramen:</strong> Large and triangular to accommodate cervical spinal cord
+                        enlargement</li>
+                    <li><strong>Intervertebral discs:</strong> Composed of nucleus pulposus and annulus fibrosus,
+                        thinner than lumbar discs</li>
+                    <li><strong>Facet joints:</strong> Oriented at 45° angle, allowing combined flexion/extension with
+                        rotation</li>
+                    <li><strong>Ligamentous support:</strong> Includes anterior/posterior longitudinal ligaments,
+                        ligamentum flavum, and cruciform ligament complex</li>
+                </ul>
+            </section>
+
+            <section id="biomechanics">
+                <h2>Biomechanics and Range of Motion</h2>
+                <p>The cervical spine permits approximately 90° of total range of motion across all planes:</p>
+
+                <div class="highlight-box">
+                    <h3>Normal Cervical ROM Values</h3>
+                    <ul>
+                        <li><strong>Flexion:</strong> 40-50° (chin to chest)</li>
+                        <li><strong>Extension:</strong> 75-85° (looking upward)</li>
+                        <li><strong>Rotation:</strong> 70-90° bilaterally (chin toward shoulder)</li>
+                        <li><strong>Lateral bending:</strong> 35-45° bilaterally (ear toward shoulder)</li>
+                    </ul>
+                    <p>The atlanto-occipital joint contributes ~50% of flexion/extension, while the atlantoaxial joint
+                        provides ~50% of rotation.</p>
+                </div>
+
+                <h3>Load-Bearing Characteristics</h3>
+                <p>The cervical spine supports the weight of the head (approximately 10-12 pounds or 4.5-5.5 kg) while
+                    allowing extensive mobility. The load-bearing capacity increases caudally:</p>
+                <ul>
+                    <li>C1-C2: Primarily transitional weight-bearing</li>
+                    <li>C3-C7: Progressive increase in vertebral body size and load capacity</li>
+                    <li>Discs bear 20-30% of compressive loads in neutral position</li>
+                </ul>
+            </section>
+
+            <section id="clinical-conditions">
+                <h2>Clinical Conditions and Pathologies</h2>
+
+                <table class="condition-table">
+                    <thead>
+                        <tr>
+                            <th>Condition</th>
+                            <th>Pathology</th>
+                            <th>Clinical Presentation</th>
+                            <th>Management</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cervical Radiculopathy</td>
+                            <td>Nerve root compression (herniated disc, foraminal stenosis)</td>
+                            <td>Radicular pain, paresthesia, weakness in dermatomal pattern</td>
+                            <td>Conservative (PT, NSAIDs), epidural injections, surgical decompression</td>
+                        </tr>
+                        <tr>
+                            <td>Cervical Myelopathy</td>
+                            <td>Spinal cord compression (spondylosis, OPLL)</td>
+                            <td>Upper motor neuron signs, gait disturbance, hand clumsiness</td>
+                            <td>Surgical decompression (laminectomy, fusion)</td>
+                        </tr>
+                        <tr>
+                            <td>Whiplash Injury</td>
+                            <td>Acceleration-deceleration mechanism (MVCs)</td>
+                            <td>Neck pain/stiffness, headaches, cognitive symptoms</td>
+                            <td>Early mobilization, physical therapy, pain management</td>
+                        </tr>
+                        <tr>
+                            <td>Cervical Spondylosis</td>
+                            <td>Degenerative changes (disc height loss, osteophytes)</td>
+                            <td>Axial neck pain, stiffness, possible radicular symptoms</td>
+                            <td>Activity modification, PT, analgesics, possible fusion</td>
+                        </tr>
+                        <tr>
+                            <td>Atlantoaxial Instability</td>
+                            <td>Excessive C1-C2 motion (RA, trauma, Down syndrome)</td>
+                            <td>Neck pain, neurological deficits, potential catastrophic injury</td>
+                            <td>Surgical stabilization (C1-C2 fusion)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Red Flag Symptoms</h3>
+                <p>Certain symptoms require immediate evaluation for potential serious pathology:</p>
+                <ul>
+                    <li>Progressive neurological deficits (weakness, bowel/bladder changes)</li>
+                    <li>Severe pain following trauma (possible fracture/dislocation)</li>
+                    <li>Night pain or pain at rest (possible tumor/infection)</li>
+                    <li>Constitutional symptoms (fever, weight loss, malaise)</li>
+                    <li>History of malignancy or immunocompromised state</li>
+                </ul>
+            </section>
+
+            <section id="diagnostic-approaches">
+                <h2>Diagnostic Approaches</h2>
+
+                <h3>Imaging Modalities</h3>
+                <div class="anatomy-grid">
+                    <div class="anatomy-card">
+                        <h4>Plain Radiographs</h4>
+                        <ul>
+                            <li>Initial evaluation for trauma, alignment, degenerative changes</li>
+                            <li>Standard views: AP, lateral, odontoid, oblique</li>
+                            <li>Flexion-extension views for instability assessment</li>
+                        </ul>
+                    </div>
+                    <div class="anatomy-card">
+                        <h4>MRI</h4>
+                        <ul>
+                            <li>Gold standard for neural element evaluation</li>
+                            <li>Assesses discs, cord compression, ligamentous injury</li>
+                            <li>Essential for myelopathy evaluation</li>
+                        </ul>
+                    </div>
+                    <div class="anatomy-card">
+                        <h4>CT</h4>
+                        <ul>
+                            <li>Superior for bony detail (fractures, foraminal stenosis)</li>
+                            <li>CT myelography when MRI contraindicated</li>
+                            <li>3D reconstructions for surgical planning</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Clinical Assessment</h3>
+                <ul>
+                    <li><strong>Spurling's test:</strong> Radiculopathy assessment (sensitivity 40-60%, specificity
+                        90-100%)</li>
+                    <li><strong>Lhermitte's sign:</strong> Electric shock sensation with neck flexion (suggestive of
+                        cord irritation)</li>
+                    <li><strong>Hoffmann's sign:</strong> Upper motor neuron sign (thumb/finger flexion with flicking
+                        distal phalanx)</li>
+                    <li><strong>Clonus/Hyperreflexia:</strong> Suggests myelopathy when present</li>
+                </ul>
+            </section>
+
+            <section id="treatment-options">
+                <h2>Treatment Options</h2>
+
+                <h3>Conservative Management</h3>
+                <ul>
+                    <li><strong>Physical therapy:</strong> Cervical stabilization, postural training, ROM exercises</li>
+                    <li><strong>Medications:</strong> NSAIDs, neuropathic agents (gabapentin), muscle relaxants</li>
+                    <li><strong>Interventional procedures:</strong> Epidural steroid injections, facet/medial branch
+                        blocks</li>
+                    <li><strong>Modalities:</strong> TENS, traction (controversial), acupuncture</li>
+                </ul>
+
+                <h3>Surgical Interventions</h3>
+                <p>Indications for surgery include progressive neurological deficits, spinal cord compression,
+                    instability, or refractory pain:</p>
+                <div class="anatomy-grid">
+                    <div class="anatomy-card">
+                        <h4>Anterior Approaches</h4>
+                        <ul>
+                            <li>ACDF (Anterior cervical discectomy and fusion)</li>
+                            <li>Artificial disc replacement</li>
+                            <li>Corpectomy for multilevel disease</li>
+                        </ul>
+                    </div>
+                    <div class="anatomy-card">
+                        <h4>Posterior Approaches</h4>
+                        <ul>
+                            <li>Laminectomy/laminoplasty</li>
+                            <li>Posterior cervical fusion</li>
+                            <li>Foraminotomy</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="rehabilitation">
+                <h2>Rehabilitation Principles</h2>
+                <p>Effective cervical rehabilitation follows a progressive approach:</p>
+                <ol>
+                    <li><strong>Acute phase (0-2 weeks):</strong> Pain control, gentle ROM, postural education</li>
+                    <li><strong>Subacute phase (2-6 weeks):</strong> Progressive strengthening, neuromuscular control
+                    </li>
+                    <li><strong>Recovery phase (6-12 weeks):</strong> Functional training, endurance exercises</li>
+                    <li><strong>Maintenance phase (12+ weeks):</strong> Sport/work-specific training, prevention
+                        strategies</li>
+                </ol>
+
+                <div class="highlight-box">
+                    <h3>Evidence-Based Rehabilitation Components</h3>
+                    <ul>
+                        <li>Deep cervical flexor strengthening (craniocervical flexion exercises)</li>
+                        <li>Scapulothoracic stabilization</li>
+                        <li>Sensorimotor training (balance/proprioception)</li>
+                        <li>Ergonomic and postural modification</li>
+                        <li>Graded exposure to functional activities</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="prevention">
+                <h2>Prevention Strategies</h2>
+                <ul>
+                    <li>Maintain neutral cervical posture during activities</li>
+                    <li>Ergonomic workstation setup (monitor at eye level, proper chair support)</li>
+                    <li>Regular movement breaks during prolonged sitting</li>
+                    <li>Neck-strengthening and flexibility exercises</li>
+                    <li>Proper head support during sleep (pillow height/position)</li>
+                    <li>Seatbelt use and proper head restraint positioning in vehicles</li>
+                </ul>
+            </section>
+
+            <div class="references">
+                <h3>References</h3>
+                <p>1. Bogduk N. Clinical Anatomy of the Lumbar Spine and Sacrum. 5th ed. Elsevier; 2015.</p>
+                <p>2. Magee DJ. Orthopedic Physical Assessment. 7th ed. Elsevier; 2019.</p>
+                <p>3. Malanga GA, Landes P, Nadler SF. Provocative tests in cervical spine examination: historical basis
+                    and scientific analyses. Pain Physician. 2003;6(2):199-205.</p>
+                <p>4. Childress MA, Becker BA. Nonoperative Management of Cervical Radiculopathy. Am Fam Physician.
+                    2016;93(9):746-754.</p>
+            </div>
+        </div>
+        
+        <div id="footer"></div>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/comp.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+/* Global Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Checkout Layout */
+.checkout-container {
+    display: flex;
+    max-width: 900px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Content */
+.checkout-content {
+    flex: 3;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+/* Navigation */
+.checkout-nav {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+}
+
+.checkout-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.checkout-nav li {
+    padding: 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.checkout-nav li:hover, .checkout-nav li.active {
+    color: #e63946;
+}
+
+/* Forms & Inputs */
+.form-group {
+    margin-bottom: 12px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button.btn {
+    width: 100%;
+    background: #e63946;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button.btn:hover {
+    background: #d62839;
+}
+
+/* Order Items */
+.order-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.order-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.price {
+    color: #e63946;
+    font-weight: bold;
+}
+
+.price del {
+    color: #777;
+    font-size: 12px;
+}
+
+/* Payment Methods */
+.payment-method {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.payment-method input {
+    margin-right: 10px;
+}
+
+.payment-method label {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.payment-method i {
+    margin-right: 8px;
+    font-size: 18px;
+    color: #e63946;
+}
+
+/* Hidden Sections */
+.hidden {
+    display: none;
+}

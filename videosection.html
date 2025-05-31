@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Video Gallery</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        :root {
+            --primary: #2a9d8f;
+            --secondary: #264653;
+            --accent: #e9c46a;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --text: #333;
+            --gray: #6c757d;
+        }
+
+        .video-gallery {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-info {
+            padding: 1.5rem;
+        }
+
+        .video-info h3 {
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .video-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .video-description {
+            color: var(--text);
+            font-size: 0.95rem;
+        }
+
+        .category-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .category-btn {
+            padding: 0.5rem 1.5rem;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .category-btn:hover,
+        .category-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <div id="nav"></div>
+
+    <!-- main -->
+    <main>
+        <section class="video-gallery">
+            <div class="section-header">
+                <h2 style="color:  #264653;">Health & Wellness Videos</h2>
+                <p>Explore our collection of professional health education videos</p>
+            </div>
+
+            <!-- <div class="category-filter">
+            <button class="category-btn active">All</button>
+            <button class="category-btn">Nutrition</button>
+            <button class="category-btn">Fitness</button>
+            <button class="category-btn">Mental Health</button>
+            <button class="category-btn">Preventive Care</button>
+        </div> -->
+
+            <div class="video-grid">
+                <!-- Video 1 -->
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/KeqX7nwJQy8?si=r6e4iS7KhPdwd_PR"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <!-- <div class="video-info">
+                    <h3>Nutrition Fundamentals for Healthy Living</h3>
+                    <div class="video-meta">
+                        <span>Dr. Sarah Johnson</span>
+                        <span>15 min</span>
+                    </div>
+                    <p class="video-description">Learn the basics of balanced nutrition and how to make healthier food choices in your daily life.</p>
+                </div> -->
+                </div>
+
+                <!-- Video 2 -->
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/3u_Q2r2k2jI?si=YH986yIgP6irndXx"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <!-- <div class="video-info">
+                    <h3>Home Workout Routine for Beginners</h3>
+                    <div class="video-meta">
+                        <span>Coach Michael Chen</span>
+                        <span>22 min</span>
+                    </div>
+                    <p class="video-description">A complete no-equipment workout you can do at home to improve strength and flexibility.</p>
+                </div> -->
+                </div>
+
+                <!-- Video 3 -->
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/TJY7JqqvZDI?si=MxKkAUurjQzUrcBO"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <!-- <div class="video-info">
+                    <h3>Managing Stress and Anxiety</h3>
+                    <div class="video-meta">
+                        <span>Dr. Emma Rodriguez</span>
+                        <span>18 min</span>
+                    </div>
+                    <p class="video-description">Evidence-based techniques to reduce stress and improve your mental wellbeing.</p>
+                </div> -->
+                </div>
+
+                <!-- Video 4 -->
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/O4f_kESwnz0?si=IKoMhY0WsKLJXMr2"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <!-- <div class="video-info">
+                    <h3>The Science of Sleep</h3>
+                    <div class="video-meta">
+                        <span>Dr. James Wilson</span>
+                        <span>25 min</span>
+                    </div>
+                    <p class="video-description">Understanding sleep cycles and practical tips for better sleep quality.</p>
+                </div> -->
+                </div>
+
+                <!-- Video 5 -->
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/MtJcjEdSqto?si=1FjNWqp5QgmVg_zN"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <!-- <div class="video-info">
+                    <h3>Heart-Healthy Eating Habits</h3>
+                    <div class="video-meta">
+                        <span>Dr. Priya Patel</span>
+                        <span>12 min</span>
+                    </div>
+                    <p class="video-description">Dietary recommendations to support cardiovascular health and reduce disease risk.</p>
+                </div> -->
+                </div>
+
+                <!-- Video 6 -->
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/puG3MW2KXNA?si=YK-F9ME6sCVi8sKE"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <!-- <div class="video-info">
+                    <h3>Yoga for Back Pain Relief</h3>
+                    <div class="video-meta">
+                        <span>Yoga Therapist Ana</span>
+                        <span>30 min</span>
+                    </div>
+                    <p class="video-description">Gentle yoga sequences specifically designed to alleviate chronic back pain.</p>
+                </div> -->
+                </div>
+            </div>
+        </section>
+        <div id="footer"></div>
+    </main>
+
+    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/comp.js"></script>
+
+
+</body>
+
+</html>
+
+<script>
+    // Simple category filtering functionality
+    document.querySelectorAll('.category-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+            // Remove active class from all buttons
+            document.querySelectorAll('.category-btn').forEach(b => {
+                b.classList.remove('active');
+            });
+
+            // Add active class to clicked button
+            this.classList.add('active');
+
+            // In a real implementation, you would filter videos here
+            // This is just UI demonstration
+        });
+    });
+</script>
