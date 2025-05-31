@@ -1,17 +1,17 @@
 <div id="videoCarousel" class="carousel slide" style="padding: 40px 20px;" data-bs-ride="carousel">
   <div class="carousel-inner">
 
-    <!-- Slide 1 -->
+    <!-- Slide 1 - Desktop shows both, mobile shows first video -->
     <div class="carousel-item active">
       <div class="row">
-        <div class="col-12 col-md-6 mb-3">
-          <div class="card">
+        <div class="col-12 col-md-6 mb-3 d-block d-md-flex">
+          <div class="card w-100">
             <iframe class="card-img-top" height="315" src="https://www.youtube.com/embed/KeqX7nwJQy8?rel=0"
               title="Video 1" allowfullscreen></iframe>
           </div>
         </div>
-        <div class="col-12 col-md-6 mb-3">
-          <div class="card">
+        <div class="col-12 col-md-6 mb-3 d-none d-md-block">
+          <div class="card w-100">
             <iframe class="card-img-top" height="315" src="https://www.youtube.com/embed/MtJcjEdSqto?rel=0"
               title="Video 2" allowfullscreen></iframe>
           </div>
@@ -19,17 +19,35 @@
       </div>
     </div>
 
-    <!-- Slide 2 -->
+    <!-- Slide 2 - Desktop shows both, mobile shows second video -->
     <div class="carousel-item">
       <div class="row">
-        <div class="col-12 col-md-6 mb-3">
-          <div class="card">
+        <div class="col-12 col-md-6 mb-3 d-none d-md-block">
+          <div class="card w-100">
+            <iframe class="card-img-top" height="315" src="https://www.youtube.com/embed/MtJcjEdSqto?rel=0"
+              title="Video 2" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 mb-3 d-block d-md-flex">
+          <div class="card w-100">
             <iframe class="card-img-top" height="315" src="https://www.youtube.com/embed/3u_Q2r2k2jI?rel=0"
               title="Video 3" allowfullscreen></iframe>
           </div>
         </div>
-        <div class="col-12 col-md-6 mb-3">
-          <div class="card">
+      </div>
+    </div>
+
+    <!-- Slide 3 - Desktop shows both, mobile shows first video -->
+    <div class="carousel-item">
+      <div class="row">
+        <div class="col-12 col-md-6 mb-3 d-block d-md-flex">
+          <div class="card w-100">
+            <iframe class="card-img-top" height="315" src="https://www.youtube.com/embed/3u_Q2r2k2jI?rel=0"
+              title="Video 3" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 mb-3 d-none d-md-block">
+          <div class="card w-100">
             <iframe class="card-img-top" height="315" src="https://www.youtube.com/embed/TJY7JqqvZDI?rel=0"
               title="Video 4" allowfullscreen></iframe>
           </div>
@@ -37,7 +55,17 @@
       </div>
     </div>
 
-    <!-- Add more slides below as needed -->
+    <!-- Slide 4 - Only needed for mobile (last video) -->
+    <div class="carousel-item d-block d-md-none">
+      <div class="row">
+        <div class="col-12 mb-3">
+          <div class="card w-100">
+            <iframe class="card-img-top" height="315" src="https://www.youtube.com/embed/TJY7JqqvZDI?rel=0"
+              title="Video 4" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
 
